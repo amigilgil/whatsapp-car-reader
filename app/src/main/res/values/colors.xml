@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wa_green">#25D366</color>
+    <color name="wa_dark_green">#128C7E</color>
+    <color name="wa_light_green">#DCF8C6</color>
+    <color name="background">#0A0F0D</color>
+    <color name="surface">#111A15</color>
+    <color name="surface2">#162019</color>
+    <color name="text_primary">#E8F5E9</color>
+    <color name="text_muted">#6A9975</color>
+    <color name="warning_bg">#2C1A0A</color>
+    <color name="error">#EF5350</color>
+</resources>
