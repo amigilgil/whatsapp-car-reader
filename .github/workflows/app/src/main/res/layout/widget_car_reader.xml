@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_idle"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layoutDirection="rtl">
+
+    <!-- Title row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvWidgetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🚗 WA Car Reader"
+            android:textColor="#E8F5E9"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Status line -->
+    <TextView
+        android:id="@+id/tvWidgetStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="⚪ לא מחובר לרכב"
+        android:textColor="#6A9975"
+        android:textSize="11sp" />
+
+    <!-- Buttons row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Play/Pause -->
+        <TextView
+            android:id="@+id/btnWidgetPlayPause"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/widget_btn_bg"
+            android:gravity="center"
+            android:text="▶ הפעל"
+            android:textColor="#25D366"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Reply -->
+        <TextView
+            android:id="@+id/btnWidgetReply"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/widget_btn_bg"
+            android:gravity="center"
+            android:text="🎤 השב"
+            android:textColor="#E8F5E9"
+            android:textSize="11sp" />
+
+        <!-- Skip -->
+        <TextView
+            android:id="@+id/btnWidgetSkip"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/widget_btn_bg"
+            android:gravity="center"
+            android:text="⏭ דלג"
+            android:textColor="#E8F5E9"
+            android:textSize="11sp" />
+
+        <!-- Re-read -->
+        <TextView
+            android:id="@+id/btnWidgetReread"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_btn_bg"
+            android:gravity="center"
+            android:text="🔁 חזור"
+            android:textColor="#E8F5E9"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0F0D"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Section: ElevenLabs API -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="🎙️  שיבוט קול — ElevenLabs"
+            android:textColor="#25D366"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#111A15"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="#1E3326"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="הדבק כאן את מפתח ה-API מ-elevenlabs.io (חינמי)"
+                    android:textColor="#6A9975"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etElevenLabsKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#162019"
+                    android:hint="sk_xxxxxxxxxxxxxxxxxxxx"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#E8F5E9"
+                    android:textColorHint="#6A9975"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnSaveApiKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#25D366"
+                    android:text="שמור מפתח"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: Bluetooth -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="🔵  Bluetooth הרכב"
+            android:textColor="#25D366"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#111A15"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="#1E3326"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="בחר את מכשיר ה-Bluetooth של הרכב שלך"
+                    android:textColor="#6A9975"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerBtDevices"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#162019"
+                    android:textColor="#E8F5E9" />
+
+                <Button
+                    android:id="@+id/btnRefreshBt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#162019"
+                    android:text="🔄 רענן רשימה"
+                    android:textColor="#25D366"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: Reading Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="📢  הגדרות קריאה"
+            android:textColor="#25D366"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#111A15"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="#1E3326"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Speed -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="מהירות קריאה"
+                        android:textColor="#E8F5E9"
+                        android:textSize="14sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekReadingSpeed"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:max="15"
+                        android:progressTint="#25D366"
+                        android:thumbTint="#25D366" />
+
+                    <TextView
+                        android:id="@+id/tvSpeedValue"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="×1.0"
+                        android:textColor="#25D366"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Switches -->
+                <include layout="@layout/settings_switch_row"
+                    android:id="@+id/rowReadOnlyCar" />
+
+                <Switch
+                    android:id="@+id/switchReadOnlyCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="קרא רק כשמחובר לרכב"
+                    android:textColor="#E8F5E9"
+                    android:textSize="14sp"
+                    android:thumbTint="#25D366"
+                    android:layout_marginBottom="4dp" />
+
+                <Switch
+                    android:id="@+id/switchAnnounceSender"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="הכרז שם השולח לפני ההודעה"
+                    android:textColor="#E8F5E9"
+                    android:textSize="14sp"
+                    android:thumbTint="#25D366"
+                    android:layout_marginBottom="4dp" />
+
+                <Switch
+                    android:id="@+id/switchAnnounceGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="הכרז שם קבוצה"
+                    android:textColor="#E8F5E9"
+                    android:textSize="14sp"
+                    android:thumbTint="#25D366"
+                    android:layout_marginBottom="4dp" />
+
+                <Switch
+                    android:id="@+id/switchAutoStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="הפעל אוטומטית בהפעלת המכשיר"
+                    android:textColor="#E8F5E9"
+                    android:textSize="14sp"
+                    android:thumbTint="#25D366" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
